@@ -15,6 +15,3 @@ public class FluxStore<StateT: FluxState> {
         return action.call()
     }
 }
-
-struct XState: FluxState { }
-let x = FluxStore<XState>(state: XState())
