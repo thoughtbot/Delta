@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E797CB931BF6741300A653EB /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E797CB921BF6741300A653EB /* ReactiveCocoa.framework */; };
+		E797CB981BF6757900A653EB /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E797CB971BF6757900A653EB /* Result.framework */; };
 		E7ACEA641BF62BD40045CA6A /* Flux.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Flux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Flux.framework */; };
 		E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */; };
@@ -16,12 +18,6 @@
 		E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA891BF630350045CA6A /* AsyncAction.swift */; };
 		E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */; };
 		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
-		E7ACEA8F1BF638EC0045CA6A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */; };
-		E7ACEA901BF638EE0045CA6A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA801BF62FF60045CA6A /* Result.framework */; };
-		E7ACEA921BF6398F0045CA6A /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7ACEA801BF62FF60045CA6A /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7ACEA931BF639920045CA6A /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7ACEA941BF639950045CA6A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA801BF62FF60045CA6A /* Result.framework */; };
-		E7ACEA951BF639980045CA6A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */; };
 		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
 		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
 /* End PBXBuildFile section */
@@ -43,14 +39,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E7ACEA921BF6398F0045CA6A /* Result.framework in CopyFiles */,
-				E7ACEA931BF639920045CA6A /* ReactiveCocoa.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E797CB921BF6741300A653EB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Checkouts/ReactiveCocoa/build/Debug/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		E797CB971BF6757900A653EB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Checkouts/Result/build/Debug/Result.framework; sourceTree = "<group>"; };
 		E7ACEA601BF62BD40045CA6A /* Flux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Flux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flux.h; sourceTree = "<group>"; };
 		E7ACEA651BF62BD40045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +54,6 @@
 		E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxTests.swift; sourceTree = "<group>"; };
 		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		E7ACEA801BF62FF60045CA6A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E7ACEA851BF630230045CA6A /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		E7ACEA891BF630350045CA6A /* AsyncAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncAction.swift; sourceTree = "<group>"; };
@@ -74,8 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7ACEA901BF638EE0045CA6A /* Result.framework in Frameworks */,
-				E7ACEA8F1BF638EC0045CA6A /* ReactiveCocoa.framework in Frameworks */,
+				E797CB981BF6757900A653EB /* Result.framework in Frameworks */,
+				E797CB931BF6741300A653EB /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7ACEA941BF639950045CA6A /* Result.framework in Frameworks */,
-				E7ACEA951BF639980045CA6A /* ReactiveCocoa.framework in Frameworks */,
 				E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,10 +84,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E797CB961BF6741D00A653EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E797CB971BF6757900A653EB /* Result.framework */,
+				E797CB921BF6741300A653EB /* ReactiveCocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7ACEA561BF62BD40045CA6A = {
 			isa = PBXGroup;
 			children = (
-				E7ACEA841BF62FFE0045CA6A /* Frameworks */,
+				E797CB961BF6741D00A653EB /* Frameworks */,
 				E7ACEA621BF62BD40045CA6A /* Flux */,
 				E7ACEA6E1BF62BD50045CA6A /* FluxTests */,
 				E7ACEA611BF62BD40045CA6A /* Products */,
@@ -135,15 +136,6 @@
 				E7ACEA711BF62BD50045CA6A /* Info.plist */,
 			);
 			path = FluxTests;
-			sourceTree = "<group>";
-		};
-		E7ACEA841BF62FFE0045CA6A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */,
-				E7ACEA801BF62FF60045CA6A /* Result.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +314,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -370,7 +362,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -398,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -405,6 +398,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/build/Debug",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/build/Debug",
 				);
 				INFOPLIST_FILE = Flux/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -420,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -427,6 +423,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Checkouts/ReactiveCocoa/build/Debug",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Result/build/Debug",
 				);
 				INFOPLIST_FILE = Flux/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
