@@ -18,6 +18,10 @@ The source on `master` assumes Swift 2.1
 github "thoughtbot/Flux"
 ```
 
+```
+sed -i '' 's@<ReactiveCocoa/\(.*\)>@"\1"@g' Carthage/Checkouts/Flux/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h
+```
+
 Then run `carthage update`.
 
 Follow the current instructions in [Carthage's README][carthage-installation]

@@ -1,5 +1,5 @@
 import XCTest
-@testable import Flux
+import Flux
 
 var store: Store!
 
