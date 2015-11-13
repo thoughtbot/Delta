@@ -10,6 +10,20 @@
 		E7ACEA641BF62BD40045CA6A /* Flux.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Flux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Flux.framework */; };
 		E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */; };
+		E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA7A1BF62E9A0045CA6A /* Store.swift */; };
+		E7ACEA861BF630230045CA6A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA851BF630230045CA6A /* State.swift */; };
+		E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA871BF6302D0045CA6A /* Action.swift */; };
+		E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA891BF630350045CA6A /* AsyncAction.swift */; };
+		E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */; };
+		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
+		E7ACEA8F1BF638EC0045CA6A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */; };
+		E7ACEA901BF638EE0045CA6A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA801BF62FF60045CA6A /* Result.framework */; };
+		E7ACEA921BF6398F0045CA6A /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7ACEA801BF62FF60045CA6A /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7ACEA931BF639920045CA6A /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E7ACEA941BF639950045CA6A /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA801BF62FF60045CA6A /* Result.framework */; };
+		E7ACEA951BF639980045CA6A /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */; };
+		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
+		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +36,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E7ACEA911BF639860045CA6A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E7ACEA921BF6398F0045CA6A /* Result.framework in CopyFiles */,
+				E7ACEA931BF639920045CA6A /* ReactiveCocoa.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E7ACEA601BF62BD40045CA6A /* Flux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Flux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flux.h; sourceTree = "<group>"; };
@@ -29,6 +57,16 @@
 		E7ACEA6A1BF62BD50045CA6A /* FluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxTests.swift; sourceTree = "<group>"; };
 		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E7ACEA801BF62FF60045CA6A /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		E7ACEA851BF630230045CA6A /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		E7ACEA891BF630350045CA6A /* AsyncAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncAction.swift; sourceTree = "<group>"; };
+		E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluxSetup.swift; sourceTree = "<group>"; };
+		E7ACEA8D1BF638400045CA6A /* TestModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		E7ACEA961BF63CC90045CA6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E7ACEA981BF63E590045CA6A /* TestActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA901BF638EE0045CA6A /* Result.framework in Frameworks */,
+				E7ACEA8F1BF638EC0045CA6A /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA941BF639950045CA6A /* Result.framework in Frameworks */,
+				E7ACEA951BF639980045CA6A /* ReactiveCocoa.framework in Frameworks */,
 				E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +95,7 @@
 		E7ACEA561BF62BD40045CA6A = {
 			isa = PBXGroup;
 			children = (
+				E7ACEA841BF62FFE0045CA6A /* Frameworks */,
 				E7ACEA621BF62BD40045CA6A /* Flux */,
 				E7ACEA6E1BF62BD50045CA6A /* FluxTests */,
 				E7ACEA611BF62BD40045CA6A /* Products */,
@@ -73,6 +116,10 @@
 			children = (
 				E7ACEA631BF62BD40045CA6A /* Flux.h */,
 				E7ACEA651BF62BD40045CA6A /* Info.plist */,
+				E7ACEA7A1BF62E9A0045CA6A /* Store.swift */,
+				E7ACEA851BF630230045CA6A /* State.swift */,
+				E7ACEA871BF6302D0045CA6A /* Action.swift */,
+				E7ACEA891BF630350045CA6A /* AsyncAction.swift */,
 			);
 			path = Flux;
 			sourceTree = "<group>";
@@ -81,9 +128,22 @@
 			isa = PBXGroup;
 			children = (
 				E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */,
+				E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */,
+				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
+				E7ACEA981BF63E590045CA6A /* TestActions.swift */,
+				E7ACEA961BF63CC90045CA6A /* Helpers.swift */,
 				E7ACEA711BF62BD50045CA6A /* Info.plist */,
 			);
 			path = FluxTests;
+			sourceTree = "<group>";
+		};
+		E7ACEA841BF62FFE0045CA6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7ACEA821BF62FF90045CA6A /* ReactiveCocoa.framework */,
+				E7ACEA801BF62FF60045CA6A /* Result.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +168,7 @@
 				E7ACEA5C1BF62BD40045CA6A /* Frameworks */,
 				E7ACEA5D1BF62BD40045CA6A /* Headers */,
 				E7ACEA5E1BF62BD40045CA6A /* Resources */,
+				E7ACEA7C1BF62F010045CA6A /* Copy Frameworks (Carthage) */,
 			);
 			buildRules = (
 			);
@@ -125,6 +186,7 @@
 				E7ACEA661BF62BD50045CA6A /* Sources */,
 				E7ACEA671BF62BD50045CA6A /* Frameworks */,
 				E7ACEA681BF62BD50045CA6A /* Resources */,
+				E7ACEA911BF639860045CA6A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -189,11 +251,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E7ACEA7C1BF62F010045CA6A /* Copy Frameworks (Carthage) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+			);
+			name = "Copy Frameworks (Carthage)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E7ACEA5B1BF62BD40045CA6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */,
+				E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */,
+				E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */,
+				E7ACEA861BF630230045CA6A /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */,
 				E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */,
+				E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */,
+				E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */,
+				E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,26 +397,37 @@
 		E7ACEA751BF62BD50045CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Flux/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E7ACEA761BF62BD50045CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Flux/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -340,6 +440,10 @@
 		E7ACEA781BF62BD50045CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FluxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.FluxTests;
@@ -350,6 +454,10 @@
 		E7ACEA791BF62BD50045CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FluxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.FluxTests;
@@ -376,6 +484,7 @@
 				E7ACEA761BF62BD50045CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7ACEA771BF62BD50045CA6A /* Build configuration list for PBXNativeTarget "FluxTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +493,7 @@
 				E7ACEA791BF62BD50045CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

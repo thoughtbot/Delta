@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+set -o pipefail
+
+xcrun xcodebuild \
+  -project Flux.xcodeproj \
+  -scheme Flux \
+  test
