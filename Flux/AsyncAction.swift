@@ -1,4 +1,4 @@
-protocol FluxAsyncAction {
+public protocol FluxAsyncAction {
     typealias Response
     func call() -> Response
 }

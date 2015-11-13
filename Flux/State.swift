@@ -1,1 +1,1 @@
-protocol FluxState { }
+public protocol FluxState { }

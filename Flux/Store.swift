@@ -1,6 +1,6 @@
 import ReactiveCocoa
 
-class FluxStore<StateT: FluxState> {
+public class FluxStore<StateT: FluxState> {
     let state: MutableProperty<StateT>
 
     init(state: StateT) {
