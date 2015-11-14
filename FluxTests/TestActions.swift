@@ -24,7 +24,7 @@ struct FetchUsersAction: AsyncAction {
     let usersToReturn: [User]
 
     func call() -> Response {
-        return SignalProducer { (observer, _) in
+        return SignalProducer { observer, _ in
             delay(0.1) {
                 store.dispatch(SetUsersAction(users: self.usersToReturn))
                 observer.sendNext(self.usersToReturn)
