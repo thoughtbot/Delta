@@ -10,13 +10,17 @@ We expect everyone to follow the code of conduct
 anywhere in thoughtbot's project codebases,
 issue trackers, chatrooms, and mailing lists.
 
-$(INSTALL_DEPENDENCIES)
+```sh
+bin/setup
+```
 
 Fork the repo.
 
 Make sure the tests pass:
 
-    $(TEST_RUNNER)
+```sh
+bin/test
+```
 
 Make your change, with new passing tests. Follow the [style guide][style].
 

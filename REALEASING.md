@@ -10,7 +10,7 @@
 1. Push changes: `git push --tags`
 1. Build and publish:
   ```bash
-  ...
+  TODO...
   ```
 
 1. Add a new GitHub release using the recent `NEWS.md` as the content. Sample

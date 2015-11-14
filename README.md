@@ -1,8 +1,18 @@
 # Flux
 
-Flux-like stuff in Swift
+Flux-like stuff with [ReactiveCocoa] in Swift.
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+We're currently built off a fork of [ReactiveCocoa] due to a [RAC issue]. If you
+are using RAC in your project you need to use my fork for it to build correctly.
+
+```
+github "jakecraige/ReactiveCocoa" "jc-headers"
+```
+
+[RAC issue]: https://github.com/ReactiveCocoa/ReactiveCocoa/issues/2495
+[ReactiveCocoa]: https://github.com/ReactiveCocoa/ReactiveCocoa
 
 ## Source Compatibility ##
 
@@ -16,10 +26,6 @@ The source on `master` assumes Swift 2.1
 
 ```
 github "thoughtbot/Flux"
-```
-
-```
-sed -i '' 's@<ReactiveCocoa/\(.*\)>@"\1"@g' Carthage/Checkouts/Flux/Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h
 ```
 
 Then run `carthage update`.

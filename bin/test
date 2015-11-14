@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-xcrun xcodebuild \
-  -project Flux.xcodeproj \
+xcodebuild test \
+  -workspace Flux.xcworkspace \
   -scheme Flux \
-  test
+  -sdk iphonesimulator
