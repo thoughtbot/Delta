@@ -32,18 +32,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		E7ACEA911BF639860045CA6A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		E797CB921BF6741300A653EB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Checkouts/ReactiveCocoa/build/Debug/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E797CB971BF6757900A653EB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Checkouts/Result/build/Debug/Result.framework; sourceTree = "<group>"; };
@@ -160,7 +148,6 @@
 				E7ACEA5C1BF62BD40045CA6A /* Frameworks */,
 				E7ACEA5D1BF62BD40045CA6A /* Headers */,
 				E7ACEA5E1BF62BD40045CA6A /* Resources */,
-				E7ACEA7C1BF62F010045CA6A /* Copy Frameworks (Carthage) */,
 			);
 			buildRules = (
 			);
@@ -178,7 +165,6 @@
 				E7ACEA661BF62BD50045CA6A /* Sources */,
 				E7ACEA671BF62BD50045CA6A /* Frameworks */,
 				E7ACEA681BF62BD50045CA6A /* Resources */,
-				E7ACEA911BF639860045CA6A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -242,25 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E7ACEA7C1BF62F010045CA6A /* Copy Frameworks (Carthage) */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-			);
-			name = "Copy Frameworks (Carthage)";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7ACEA5B1BF62BD40045CA6A /* Sources */ = {
