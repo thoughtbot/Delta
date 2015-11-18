@@ -1,4 +1,4 @@
-import ReactiveCocoa
+import RxSwift
 @testable import Flux
 
 struct SetCurrentUserAction: Action {
@@ -20,16 +20,18 @@ struct SetUsersAction: Action {
 }
 
 struct FetchUsersAction: AsyncAction {
-    typealias Response = SignalProducer<[User], NoError>
+    typealias Response = Observable<[User]>
     let usersToReturn: [User]
 
     func call() -> Response {
-        return SignalProducer { observer, _ in
+        return create { observer in
             delay(0.1) {
                 store.dispatch(SetUsersAction(users: self.usersToReturn))
-                observer.sendNext(self.usersToReturn)
-                observer.sendCompleted()
+                observer.onNext(self.usersToReturn)
+                observer.onCompleted()
             }
+
+            return NopDisposable.instance
         }
     }
 }

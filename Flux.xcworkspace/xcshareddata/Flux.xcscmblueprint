@@ -4,6 +4,7 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8B123162C394A0A0A138779108E4C59DD771865A" : 0,
     "E084C86B03F81D63323C9E7510697EA528A758C7" : 0,
     "78151242D3D1C1C6A3326714DA726937636E38D8" : 0,
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : 0,
@@ -11,6 +12,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C764E5C2-46A6-48F7-ABD8-4302AA1F679C",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8B123162C394A0A0A138779108E4C59DD771865A" : "Flux\/Carthage\/Checkouts\/RxSwift\/",
     "E084C86B03F81D63323C9E7510697EA528A758C7" : "Flux\/Carthage\/Checkouts\/ReactiveCocoa\/Carthage\/Checkouts\/xcconfigs\/",
     "78151242D3D1C1C6A3326714DA726937636E38D8" : "Flux\/",
     "51B210D0D41486D3ADD6940D57E4480BBD4DE4C5" : "Flux\/Carthage\/Checkouts\/ReactiveCocoa\/",
@@ -29,6 +31,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:thoughtbot\/Flux.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "78151242D3D1C1C6A3326714DA726937636E38D8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ReactiveX\/RxSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B123162C394A0A0A138779108E4C59DD771865A"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/antitypical\/Result.git",

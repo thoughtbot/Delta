@@ -1,12 +1,15 @@
 import XCTest
+import RxSwift
 import Flux
 
 var store: Store!
+var disposeBag: DisposeBag!
 
 class FluxTests: XCTestCase {
     override func setUp() {
         super.setUp()
         store = Store(state: AppState())
+        disposeBag = DisposeBag()
     }
 
     func testDispatchAction() {
@@ -22,10 +25,10 @@ class FluxTests: XCTestCase {
         let usersToReturn = [User(name: "Jane Doe"), User(name: "John Doe")]
 
         let action = FetchUsersAction(usersToReturn: usersToReturn)
-        store.dispatch(action).startWithNext { _ in
+        store.dispatch(action).subscribeNext { next in
             XCTAssertEqual(store.users, usersToReturn)
             expectation.fulfill()
-        }
+        }.addDisposableTo(disposeBag)
 
         waitForExpectationsWithTimeout(0.5, handler: nil)
     }
@@ -34,13 +37,13 @@ class FluxTests: XCTestCase {
         let expectation = expectationWithDescription("State producer fires event when value within changes")
         let user = User(name: "Test")
 
-        store.state.producer.startWithNext { _ in
+        store.state.subscribeNext { _ in
             // This protects for it getting called on initialization with current nil value
             guard let currentUser = store.currentUser else { return }
 
             XCTAssertEqual(currentUser, user)
             expectation.fulfill()
-        }
+        }.addDisposableTo(disposeBag)
         store.dispatch(SetCurrentUserAction(user: user))
 
         waitForExpectationsWithTimeout(0.5, handler: nil)
@@ -52,14 +55,14 @@ class FluxTests: XCTestCase {
         let otherUsers = [User(name: "Jane Doe"), User(name: "John Doe")]
 
         var called = 0
-        store.state.value.currentUser.producer.on(next: { _ in
+        store.state.value.currentUser.subscribeNext { _ in
             called += 1
-        }).startWithNext { _ in
+
             if called > 1 {
                 XCTAssertEqual(called, 2, "called initially when bound and after it updated")
                 expectation.fulfill()
             }
-        }
+        }.addDisposableTo(disposeBag)
         store.dispatch(SetCurrentUserAction(user: user))
         store.dispatch(SetUsersAction(users: otherUsers))
 

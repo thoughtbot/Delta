@@ -1,10 +1,10 @@
-import ReactiveCocoa
+import RxSwift
 
 public class FluxStore<StateT: FluxState> {
-    public let state: MutableProperty<StateT>
+    public let state: Variable<StateT>
 
     public init(state: StateT) {
-        self.state = MutableProperty(state)
+        self.state = Variable(state)
     }
 
     public func dispatch<A: FluxAction where A.StateT == StateT>(action: A) {

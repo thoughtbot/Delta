@@ -2,12 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Carthage/Checkouts/RxSwift/Rx.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "container:Flux.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/ReactiveCocoa/ReactiveCocoa.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Result/Result.xcodeproj">
    </FileRef>
 </Workspace>

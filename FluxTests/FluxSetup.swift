@@ -1,9 +1,9 @@
-import ReactiveCocoa
+import RxSwift
 @testable import Flux
 
 struct AppState: FluxState {
-    let currentUser: MutableProperty<User?> = MutableProperty(.None)
-    let users: MutableProperty<[User]> = MutableProperty([])
+    let currentUser: Variable<User?> = Variable(.None)
+    let users: Variable<[User]> = Variable([])
 }
 
 protocol Action: FluxAction {
