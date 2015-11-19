@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E799CF051BFE110B00E751E5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF041BFE110B00E751E5 /* RxSwift.framework */; };
 		E7ACEA641BF62BD40045CA6A /* Flux.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Flux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Flux.framework */; };
 		E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */; };
+		E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA7A1BF62E9A0045CA6A /* Store.swift */; };
+		E7ACEA861BF630230045CA6A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA851BF630230045CA6A /* State.swift */; };
+		E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA871BF6302D0045CA6A /* Action.swift */; };
+		E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA891BF630350045CA6A /* AsyncAction.swift */; };
+		E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */; };
+		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
+		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
+		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +32,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E797CB921BF6741300A653EB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Checkouts/ReactiveCocoa/build/Debug/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		E797CB971BF6757900A653EB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Checkouts/Result/build/Debug/Result.framework; sourceTree = "<group>"; };
+		E799CEF91BFD610B00E751E5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
+		E799CEFB1BFD610D00E751E5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxCocoa.framework"; sourceTree = "<group>"; };
+		E799CF041BFE110B00E751E5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
+		E799CF061BFE114200E751E5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-watchos/RxCocoa.framework"; sourceTree = "<group>"; };
 		E7ACEA601BF62BD40045CA6A /* Flux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Flux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flux.h; sourceTree = "<group>"; };
 		E7ACEA651BF62BD40045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA6A1BF62BD50045CA6A /* FluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxTests.swift; sourceTree = "<group>"; };
 		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E7ACEA851BF630230045CA6A /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		E7ACEA891BF630350045CA6A /* AsyncAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncAction.swift; sourceTree = "<group>"; };
+		E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluxSetup.swift; sourceTree = "<group>"; };
+		E7ACEA8D1BF638400045CA6A /* TestModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		E7ACEA961BF63CC90045CA6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E7ACEA981BF63E590045CA6A /* TestActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActions.swift; sourceTree = "<group>"; };
+		E7B897651BFCB8F200332368 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
+		E7B897671BFCB8F500332368 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxCocoa.framework"; sourceTree = "<group>"; };
+		E7B897691BFCB91100332368 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxBlocking.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E799CF051BFE110B00E751E5 /* RxSwift.framework in Frameworks */,
 				E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,9 +77,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E797CB961BF6741D00A653EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E799CF061BFE114200E751E5 /* RxCocoa.framework */,
+				E799CF041BFE110B00E751E5 /* RxSwift.framework */,
+				E799CEFB1BFD610D00E751E5 /* RxCocoa.framework */,
+				E799CEF91BFD610B00E751E5 /* RxSwift.framework */,
+				E7B897691BFCB91100332368 /* RxBlocking.framework */,
+				E7B897671BFCB8F500332368 /* RxCocoa.framework */,
+				E7B897651BFCB8F200332368 /* RxSwift.framework */,
+				E797CB971BF6757900A653EB /* Result.framework */,
+				E797CB921BF6741300A653EB /* ReactiveCocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7ACEA561BF62BD40045CA6A = {
 			isa = PBXGroup;
 			children = (
+				E797CB961BF6741D00A653EB /* Frameworks */,
 				E7ACEA621BF62BD40045CA6A /* Flux */,
 				E7ACEA6E1BF62BD50045CA6A /* FluxTests */,
 				E7ACEA611BF62BD40045CA6A /* Products */,
@@ -73,6 +117,10 @@
 			children = (
 				E7ACEA631BF62BD40045CA6A /* Flux.h */,
 				E7ACEA651BF62BD40045CA6A /* Info.plist */,
+				E7ACEA7A1BF62E9A0045CA6A /* Store.swift */,
+				E7ACEA851BF630230045CA6A /* State.swift */,
+				E7ACEA871BF6302D0045CA6A /* Action.swift */,
+				E7ACEA891BF630350045CA6A /* AsyncAction.swift */,
 			);
 			path = Flux;
 			sourceTree = "<group>";
@@ -81,6 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */,
+				E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */,
+				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
+				E7ACEA981BF63E590045CA6A /* TestActions.swift */,
+				E7ACEA961BF63CC90045CA6A /* Helpers.swift */,
 				E7ACEA711BF62BD50045CA6A /* Info.plist */,
 			);
 			path = FluxTests;
@@ -194,6 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */,
+				E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */,
+				E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */,
+				E7ACEA861BF630230045CA6A /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */,
 				E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */,
+				E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */,
+				E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */,
+				E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +368,9 @@
 		E7ACEA751BF62BD50045CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +381,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E7ACEA761BF62BD50045CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +443,7 @@
 				E7ACEA761BF62BD50045CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7ACEA771BF62BD50045CA6A /* Build configuration list for PBXNativeTarget "FluxTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +452,7 @@
 				E7ACEA791BF62BD50045CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
