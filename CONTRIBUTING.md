@@ -10,10 +10,6 @@ We expect everyone to follow the code of conduct
 anywhere in thoughtbot's project codebases,
 issue trackers, chatrooms, and mailing lists.
 
-```sh
-bin/setup
-```
-
 Fork the repo.
 
 Make sure the tests pass:

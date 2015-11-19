@@ -1,36 +1,33 @@
-//
-//  FluxTests.swift
-//  FluxTests
-//
-//  Created by James Craige on 11/13/15.
-//  Copyright © 2015 thoughtbot. All rights reserved.
-//
-
 import XCTest
-@testable import Flux
+import Flux
+
+var store: Store!
 
 class FluxTests: XCTestCase {
-    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        store = Store(state: AppState())
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testDispatchAction() {
+        let user = User(name: "Jane Doe")
+
+        store.dispatch(SetCurrentUserAction(user: user))
+
+        XCTAssertEqual(store.currentUser, user)
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+
+    func testDispatchAsyncAction() {
+        let expectation = expectationWithDescription("dispatch completed")
+        let usersToReturn = [User(name: "Jane Doe"), User(name: "John Doe")]
+
+        store.state.subscribe { _ in
+            XCTAssertEqual(store.users, usersToReturn)
+            expectation.fulfill()
         }
+        let action = FetchUsersAction(usersToReturn: usersToReturn)
+        store.dispatch(action)
+
+        waitForExpectationsWithTimeout(0.5, handler: nil)
     }
-    
 }

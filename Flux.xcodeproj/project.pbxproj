@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E799CF091BFE218600E751E5 /* ObservableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF081BFE218600E751E5 /* ObservableProperty.swift */; };
+		E799CF0B1BFF9E7A00E751E5 /* ObservablePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */; };
 		E7ACEA641BF62BD40045CA6A /* Flux.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Flux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Flux.framework */; };
 		E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */; };
+		E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA7A1BF62E9A0045CA6A /* Store.swift */; };
+		E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA871BF6302D0045CA6A /* Action.swift */; };
+		E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA891BF630350045CA6A /* AsyncAction.swift */; };
+		E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */; };
+		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
+		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
+		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +32,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E799CF081BFE218600E751E5 /* ObservableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableProperty.swift; sourceTree = "<group>"; };
+		E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyTests.swift; sourceTree = "<group>"; };
 		E7ACEA601BF62BD40045CA6A /* Flux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Flux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flux.h; sourceTree = "<group>"; };
 		E7ACEA651BF62BD40045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA6A1BF62BD50045CA6A /* FluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxTests.swift; sourceTree = "<group>"; };
 		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		E7ACEA891BF630350045CA6A /* AsyncAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncAction.swift; sourceTree = "<group>"; };
+		E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluxSetup.swift; sourceTree = "<group>"; };
+		E7ACEA8D1BF638400045CA6A /* TestModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		E7ACEA961BF63CC90045CA6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E7ACEA981BF63E590045CA6A /* TestActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,9 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E797CB961BF6741D00A653EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E7ACEA561BF62BD40045CA6A = {
 			isa = PBXGroup;
 			children = (
+				E797CB961BF6741D00A653EB /* Frameworks */,
 				E7ACEA621BF62BD40045CA6A /* Flux */,
 				E7ACEA6E1BF62BD50045CA6A /* FluxTests */,
 				E7ACEA611BF62BD40045CA6A /* Products */,
@@ -73,6 +99,10 @@
 			children = (
 				E7ACEA631BF62BD40045CA6A /* Flux.h */,
 				E7ACEA651BF62BD40045CA6A /* Info.plist */,
+				E7ACEA7A1BF62E9A0045CA6A /* Store.swift */,
+				E7ACEA871BF6302D0045CA6A /* Action.swift */,
+				E7ACEA891BF630350045CA6A /* AsyncAction.swift */,
+				E799CF081BFE218600E751E5 /* ObservableProperty.swift */,
 			);
 			path = Flux;
 			sourceTree = "<group>";
@@ -81,7 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */,
+				E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */,
+				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
+				E7ACEA981BF63E590045CA6A /* TestActions.swift */,
+				E7ACEA961BF63CC90045CA6A /* Helpers.swift */,
 				E7ACEA711BF62BD50045CA6A /* Info.plist */,
+				E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */,
 			);
 			path = FluxTests;
 			sourceTree = "<group>";
@@ -194,6 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */,
+				E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */,
+				E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */,
+				E799CF091BFE218600E751E5 /* ObservableProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */,
 				E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */,
+				E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */,
+				E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */,
+				E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */,
+				E799CF0B1BFF9E7A00E751E5 /* ObservablePropertyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +352,9 @@
 		E7ACEA751BF62BD50045CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +365,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Flux;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E7ACEA761BF62BD50045CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +427,7 @@
 				E7ACEA761BF62BD50045CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7ACEA771BF62BD50045CA6A /* Build configuration list for PBXNativeTarget "FluxTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +436,7 @@
 				E7ACEA791BF62BD50045CA6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
