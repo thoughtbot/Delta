@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E799CF051BFE110B00E751E5 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF041BFE110B00E751E5 /* RxSwift.framework */; };
 		E7ACEA641BF62BD40045CA6A /* Flux.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Flux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Flux.framework */; };
 		E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */; };
@@ -18,9 +19,6 @@
 		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
 		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
 		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
-		E7B897661BFCB8F200332368 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B897651BFCB8F200332368 /* RxSwift.framework */; };
-		E7B897681BFCB8F500332368 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B897671BFCB8F500332368 /* RxCocoa.framework */; };
-		E7B8976A1BFCB91100332368 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7B897691BFCB91100332368 /* RxBlocking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +34,10 @@
 /* Begin PBXFileReference section */
 		E797CB921BF6741300A653EB /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Checkouts/ReactiveCocoa/build/Debug/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		E797CB971BF6757900A653EB /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Checkouts/Result/build/Debug/Result.framework; sourceTree = "<group>"; };
+		E799CEF91BFD610B00E751E5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
+		E799CEFB1BFD610D00E751E5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxCocoa.framework"; sourceTree = "<group>"; };
+		E799CF041BFE110B00E751E5 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-iphoneos/RxSwift.framework"; sourceTree = "<group>"; };
+		E799CF061BFE114200E751E5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = "Carthage/Checkouts/RxSwift/build/Debug-watchos/RxCocoa.framework"; sourceTree = "<group>"; };
 		E7ACEA601BF62BD40045CA6A /* Flux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Flux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flux.h; sourceTree = "<group>"; };
 		E7ACEA651BF62BD40045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B897661BFCB8F200332368 /* RxSwift.framework in Frameworks */,
-				E7B897681BFCB8F500332368 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7B8976A1BFCB91100332368 /* RxBlocking.framework in Frameworks */,
+				E799CF051BFE110B00E751E5 /* RxSwift.framework in Frameworks */,
 				E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +80,10 @@
 		E797CB961BF6741D00A653EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E799CF061BFE114200E751E5 /* RxCocoa.framework */,
+				E799CF041BFE110B00E751E5 /* RxSwift.framework */,
+				E799CEFB1BFD610D00E751E5 /* RxCocoa.framework */,
+				E799CEF91BFD610B00E751E5 /* RxSwift.framework */,
 				E7B897691BFCB91100332368 /* RxBlocking.framework */,
 				E7B897671BFCB8F500332368 /* RxCocoa.framework */,
 				E7B897651BFCB8F200332368 /* RxSwift.framework */,

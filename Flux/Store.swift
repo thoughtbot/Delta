@@ -1,17 +1,15 @@
-import RxSwift
-
-public class FluxStore<StateT: FluxState> {
-    public let state: Variable<StateT>
+public class Store<StateT: ObservableState> {
+    public var state: StateT
 
     public init(state: StateT) {
-        self.state = Variable(state)
+        self.state = state
     }
 
-    public func dispatch<A: FluxAction where A.StateT == StateT>(action: A) {
+    public func dispatch<A: Action where A.StateValueT == StateT.Value>(action: A) {
         self.state.value = action.reduce(self.state.value)
     }
 
-    public func dispatch<A: FluxAsyncAction>(action: A) -> A.Response {
+    public func dispatch<A: AsyncAction>(action: A) -> A.Response {
         return action.call()
     }
 }

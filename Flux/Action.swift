@@ -1,4 +1,4 @@
-public protocol FluxAction {
-    typealias StateT
-    func reduce(state: StateT) -> StateT
+public protocol Action {
+    typealias StateValueT
+    func reduce(state: StateValueT) -> StateValueT
 }

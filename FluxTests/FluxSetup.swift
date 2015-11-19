@@ -1,20 +1,26 @@
 import RxSwift
 @testable import Flux
 
-struct AppState: FluxState {
+struct AppState {
     let currentUser: Variable<User?> = Variable(.None)
     let users: Variable<[User]> = Variable([])
 }
 
-protocol Action: FluxAction {
-    typealias StateT = AppState
+typealias VariableAppState = Variable<AppState>
+
+protocol Action: Flux.Action {
+    typealias StateT = VariableAppState
 }
 
-protocol AsyncAction: FluxAsyncAction { }
+protocol AsyncAction: Flux.AsyncAction { }
 
-class Store: FluxStore<AppState> {
-    override init(state: AppState) {
-        super.init(state: state)
+extension Variable: Flux.ObservableState {
+    public typealias Value = Element
+}
+
+class Store: Flux.Store<VariableAppState> {
+    init(state: AppState) {
+        super.init(state: VariableAppState(state))
     }
 }
 
