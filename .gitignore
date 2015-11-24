@@ -1,3 +1,6 @@
+## OS X Finder
+.DS_Store
+
 ## Build generated
 build/
 DerivedData
@@ -18,7 +21,6 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
-*.xcscheme
 
 ## Obj-C/Swift specific
 *.hmap
