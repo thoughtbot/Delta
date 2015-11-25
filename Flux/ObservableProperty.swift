@@ -1,10 +1,6 @@
-public protocol ObservablePropertyType {
-    typealias ValueType
-    var value: ValueType { get set }
-}
-
 public class ObservableProperty<ValueType> {
     public typealias CallbackType = (ValueType -> ())
+
     private var _value: ValueType
     private var subscriptions = [CallbackType]()
 
@@ -32,5 +28,3 @@ public class ObservableProperty<ValueType> {
         }
     }
 }
-
-extension ObservableProperty: ObservablePropertyType { }
