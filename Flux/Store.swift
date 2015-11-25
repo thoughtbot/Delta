@@ -1,15 +1,18 @@
-public class Store<ObservableState: ObservablePropertyType> {
-    public var state: ObservableState
+public protocol StoreType {
+    typealias ObservableState: ObservablePropertyType
 
-    public init(state: ObservableState) {
-        self.state = state
+    var state: ObservableState { get set }
+
+    mutating func dispatch<A: ActionType where A.StateValueType == ObservableState.ValueType>(action: A)
+    func dispatch<A: AsyncActionType>(action: A) -> A.ResponseType
+}
+
+public extension StoreType {
+    public mutating func dispatch<A: ActionType where A.StateValueType == ObservableState.ValueType>(action: A) {
+        state.value = action.reduce(state.value)
     }
 
-    public func dispatch<A: ActionType where A.StateValueType == ObservableState.ValueType>(action: A) {
-        self.state.value = action.reduce(self.state.value)
-    }
-
-    public func dispatch<A: AsyncActionType>(action: A) -> A.ResponseType {
+    public func dispatch<A : AsyncActionType>(action: A) -> A.ResponseType {
         return action.call()
     }
 }

@@ -5,16 +5,8 @@ struct AppState {
     let users: ObservableProperty<[User]> = ObservableProperty(value: [])
 }
 
-protocol Action: ActionType {
-    typealias StateValueType = AppState
-}
-
-protocol AsyncAction: AsyncActionType { }
-
-class Store: Flux.Store<ObservableProperty<AppState>> {
-    init(state: AppState) {
-        super.init(state: ObservableProperty(value: state))
-    }
+struct Store: StoreType {
+    var state: ObservableProperty<AppState>
 }
 
 // MARK: Getters
