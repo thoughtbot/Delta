@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+carthage update --use-submodules --no-use-binaries --platform iOS
