@@ -12,6 +12,12 @@ issue trackers, chatrooms, and mailing lists.
 
 Fork the repo.
 
+Run the setup:
+
+```sh
+bin/setup
+```
+
 Make sure the tests pass:
 
 ```sh

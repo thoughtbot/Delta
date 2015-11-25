@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		E799CF091BFE218600E751E5 /* ObservableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF081BFE218600E751E5 /* ObservableProperty.swift */; };
 		E799CF0B1BFF9E7A00E751E5 /* ObservablePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */; };
+		E799CF1A1C05FD6100E751E5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF191C05FD6100E751E5 /* Nimble.framework */; };
+		E799CF1C1C05FD6E00E751E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF1B1C05FD6E00E751E5 /* Quick.framework */; };
 		E7ACEA641BF62BD40045CA6A /* Flux.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Flux.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Flux.framework */; };
-		E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */; };
+		E7ACEA701BF62BD50045CA6A /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */; };
 		E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA7A1BF62E9A0045CA6A /* Store.swift */; };
 		E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA871BF6302D0045CA6A /* Action.swift */; };
 		E7ACEA8A1BF630350045CA6A /* AsyncAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA891BF630350045CA6A /* AsyncAction.swift */; };
@@ -34,11 +36,13 @@
 /* Begin PBXFileReference section */
 		E799CF081BFE218600E751E5 /* ObservableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableProperty.swift; sourceTree = "<group>"; };
 		E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyTests.swift; sourceTree = "<group>"; };
+		E799CF191C05FD6100E751E5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		E799CF1B1C05FD6E00E751E5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Checkouts/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
 		E7ACEA601BF62BD40045CA6A /* Flux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Flux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flux.h; sourceTree = "<group>"; };
 		E7ACEA651BF62BD40045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA6A1BF62BD50045CA6A /* FluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxTests.swift; sourceTree = "<group>"; };
+		E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
 		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E799CF1C1C05FD6E00E751E5 /* Quick.framework in Frameworks */,
+				E799CF1A1C05FD6100E751E5 /* Nimble.framework in Frameworks */,
 				E7ACEA6B1BF62BD50045CA6A /* Flux.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +77,8 @@
 		E797CB961BF6741D00A653EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E799CF1B1C05FD6E00E751E5 /* Quick.framework */,
+				E799CF191C05FD6100E751E5 /* Nimble.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,7 +118,7 @@
 		E7ACEA6E1BF62BD50045CA6A /* FluxTests */ = {
 			isa = PBXGroup;
 			children = (
-				E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */,
+				E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */,
 				E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */,
 				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
 				E7ACEA981BF63E590045CA6A /* TestActions.swift */,
@@ -241,7 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7ACEA8C1BF630EE0045CA6A /* FluxSetup.swift in Sources */,
-				E7ACEA701BF62BD50045CA6A /* FluxTests.swift in Sources */,
+				E7ACEA701BF62BD50045CA6A /* StoreTests.swift in Sources */,
 				E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */,
 				E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */,
 				E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */,
