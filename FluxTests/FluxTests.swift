@@ -6,7 +6,8 @@ var store: Store!
 class FluxTests: XCTestCase {
     override func setUp() {
         super.setUp()
-        store = Store(state: AppState())
+        let initialState = ObservableProperty(value: AppState())
+        store = Store(state: initialState)
     }
 
     func testDispatchAction() {

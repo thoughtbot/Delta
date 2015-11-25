@@ -1,6 +1,6 @@
 @testable import Flux
 
-struct SetCurrentUserAction: Action {
+struct SetCurrentUserAction: ActionType {
     let user: User
 
     func reduce(state: AppState) -> AppState {
@@ -9,7 +9,7 @@ struct SetCurrentUserAction: Action {
     }
 }
 
-struct SetUsersAction: Action {
+struct SetUsersAction: ActionType {
     let users: [User]
 
     func reduce(state: AppState) -> AppState {
@@ -18,7 +18,7 @@ struct SetUsersAction: Action {
     }
 }
 
-struct FetchUsersAction: AsyncAction {
+struct FetchUsersAction: AsyncActionType {
     typealias ResponseType = Void
 
     let usersToReturn: [User]
