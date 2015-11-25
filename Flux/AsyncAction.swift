@@ -1,4 +1,4 @@
 public protocol AsyncActionType {
-    typealias ResponseType
-    func call() -> ResponseType
+    typealias State
+    func call() -> State
 }

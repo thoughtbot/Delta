@@ -40,7 +40,7 @@
 		E7ACEA6A1BF62BD50045CA6A /* FluxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FluxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA6F1BF62BD50045CA6A /* FluxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxTests.swift; sourceTree = "<group>"; };
 		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; tabWidth = 4; };
 		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		E7ACEA891BF630350045CA6A /* AsyncAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncAction.swift; sourceTree = "<group>"; };
 		E7ACEA8B1BF630EE0045CA6A /* FluxSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FluxSetup.swift; sourceTree = "<group>"; };
@@ -68,22 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E797CB961BF6741D00A653EB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E7ACEA561BF62BD40045CA6A = {
 			isa = PBXGroup;
 			children = (
-				E797CB961BF6741D00A653EB /* Frameworks */,
 				E7ACEA621BF62BD40045CA6A /* Flux */,
 				E7ACEA6E1BF62BD50045CA6A /* FluxTests */,
 				E7ACEA611BF62BD40045CA6A /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		E7ACEA611BF62BD40045CA6A /* Products */ = {
 			isa = PBXGroup;
@@ -115,8 +109,8 @@
 				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
 				E7ACEA981BF63E590045CA6A /* TestActions.swift */,
 				E7ACEA961BF63CC90045CA6A /* Helpers.swift */,
-				E7ACEA711BF62BD50045CA6A /* Info.plist */,
 				E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */,
+				E7ACEA711BF62BD50045CA6A /* Info.plist */,
 			);
 			path = FluxTests;
 			sourceTree = "<group>";
