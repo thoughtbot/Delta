@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "Generating docs with jazzy..."
+jazzy \
+  --module Delta \
+  --github_url https://github.com/thoughtbot/Delta \
+  --author thoughtbot \
+  --author_url https://thoughtbot.com
+
+current_branch_name=$(git symbolic-ref --short HEAD)
+current_sha=$(git rev-parse HEAD)
+commit_message="Generated documentation for ${current_sha}"
+
+echo "Checking out gh-pages..."
+git checkout gh-pages
+echo "Copying docs from 'docs/' directory..."
+cp -Rf docs/* .
+echo "Commit..."
+git add .
+git commit -m "${commit_message}"
+echo "Pushing to GitHub..."
+git push
+echo "Done. Checking out ${current_branch_name}..."
+git checkout "${current_branch_name}"

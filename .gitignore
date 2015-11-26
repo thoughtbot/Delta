@@ -27,3 +27,4 @@ xcuserdata
 *.ipa
 
 Carthage/Build
+docs
