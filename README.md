@@ -1,8 +1,15 @@
 # Delta
 
-Delta is a flux implementation for use with any Rx framework.
-
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+Managing state is hard. Delta aims to make it simple.
+
+Delta takes an app that has custom state management spread throughout all the VCs
+and simplifies it by providing a simple interface to change state and subscribe
+to its changes.
+
+It can be used standalone or with your choice of reactive framework
+plugged in. We recommend using a reactive framework to get the most value.
 
 ## Source Compatibility ##
 
@@ -25,9 +32,15 @@ for up to date installation instructions.
 
 [carthage-installation]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
 
-## What's included?
+## Usage
 
-TODO: docs
+- [Getting Started]
+- [Using Reactive Extensions][Using RX]
+- [API Documentation]
+
+[Getting Started]: ./documentation/getting-started.md
+[Using RX]: ./documentation/reactive-extensions.md
+[API Documentation]: https://thoughtbot.github.io/Delta
 
 ## Contributing
 
