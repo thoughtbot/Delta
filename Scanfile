@@ -1,0 +1,5 @@
+scheme "Flux"
+
+clean true
+
+output_types ""

@@ -1,8 +1,3 @@
 #!/usr/bin/env sh
 
-set -o pipefail
-
-xcodebuild test \
-  -workspace Flux.xcworkspace \
-  -scheme Flux \
-  -sdk iphonesimulator
+scan
