@@ -6,16 +6,14 @@ class ObservablePropertyTests: QuickSpec {
     override func spec() {
         describe("ObservableProperty") {
             it("is initialized with a value") {
-                let value = 1
+                let property = ObservableProperty(1)
                 
-                let property = ObservableProperty(value: value)
-                
-                expect(property.value).to(equal(value))
+                expect(property.value).to(equal(1))
             }
             
             describe("subscriptions") {
                 it("calls subscriptions when value changes") {
-                    let property = ObservableProperty(value: 1)
+                    let property = ObservableProperty(1)
                     
                     var called = 0
                     property.subscribe { _ in called++ }

@@ -18,7 +18,7 @@ public class ObservableProperty<ValueType> {
         }
     }
 
-    public init(value: ValueType) {
+    public init(_ value: ValueType) {
         self._value = value
     }
 
