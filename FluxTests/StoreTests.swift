@@ -9,7 +9,7 @@ class StoreTests: QuickSpec {
         describe("Store") {
             describe(".dispatch") {
                 beforeEach() {
-                    let initialState = ObservableProperty(value: AppState())
+                    let initialState = ObservableProperty(AppState())
                     store = Store(state: initialState)
                 }
                 

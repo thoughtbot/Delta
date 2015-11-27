@@ -1,8 +1,8 @@
 @testable import Flux
 
 struct AppState {
-    let currentUser: ObservableProperty<User?> = ObservableProperty(value: .None)
-    let users: ObservableProperty<[User]> = ObservableProperty(value: [])
+    let currentUser = ObservableProperty<User?>(.None)
+    let users = ObservableProperty<[User]>([])
 }
 
 struct Store: StoreType {
