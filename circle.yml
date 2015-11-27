@@ -1,0 +1,11 @@
+machine:
+  xcode:
+    version: "7.1"
+
+dependencies:
+  override:
+    - bin/setup
+
+test:
+  override:
+    - bin/test
