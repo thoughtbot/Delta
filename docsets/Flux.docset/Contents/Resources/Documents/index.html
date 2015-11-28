@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Flux  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+  </head>
+  <body>
+    <a title="Flux  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Flux Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/thoughtbot/Flux"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Flux Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Flux  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ObservableProperty.html">ObservableProperty</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ActionType.html">ActionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/AsyncActionType.html">AsyncActionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ObservablePropertyType.html">ObservablePropertyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/StoreType.html">StoreType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#flux' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='flux'>Flux</h1>
+
+<p><a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a></p>
+
+<p>Managing state is hard. Flux aims to make it simple.</p>
+
+<p>Flux takes an app that has custom state management spread throughout all the VCs
+and simplifies it by providing a simple interface to change state and subscribe
+to it&rsquo;s changes.</p>
+
+<p>This framework can be used standalone or with your choice of Rx framework
+plugged in. We recommend using an Rx framework to get the most value.</p>
+<a href='#source_compatibility' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='source_compatibility'>Source Compatibility</h2>
+
+<p>The source on <code>master</code> assumes Swift 2.1</p>
+<a href='#framework_installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='framework_installation'>Framework Installation</h2>
+<a href='#a_href_https_github_com_carthage_carthage_carthage_a' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='a_href_https_github_com_carthage_carthage_carthage_a'><a href="https://github.com/Carthage/Carthage">Carthage</a></h3>
+<pre class="highlight plaintext"><code>github "thoughtbot/Flux"
+</code></pre>
+
+<p>Then run <code>carthage update</code>.</p>
+
+<p>Follow the current instructions in <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">Carthage&rsquo;s README</a>
+for up to date installation instructions.</p>
+<a href='#getting_started_concepts_used' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='getting_started_concepts_used'>Getting Started / Concepts Used</h2>
+
+<p>The main idea is that we have a singular place that holds the <q>app state</q>, <q>the
+store</q>, and we can dispatch <q>actions</q> that update that state. Using
+a subscription pattern, we can easily subscribe to changes in the state to do
+things like update the UI, run background tasks, etc.</p>
+<a href='#the_state' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the_state'>The State</h3>
+
+<p>First we need to define what your app state is. The properties will need to
+mutable so that we can mutate this when we dispatch actions. We do this by
+defining a <code>struct</code>, we&rsquo;ll store a user id:</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">AppState</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="o">.</span><span class="kt">None</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Earlier I mentioned <q>subscribing</q> to changes. With this implementation we&rsquo;ll
+only be able to subscribe to when <em>anything</em> in the store changes. While in this
+example that&rsquo;s fine, in the real world we want to be able to subscribe to
+specific values. We can allow that functionality by using the provided
+<code>ObservableProperty</code> type.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Flux</span>
+
+<span class="kd">struct</span> <span class="kt">AppState</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">ObservableProperty</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">?</span><span class="o">&gt;</span><span class="p">(</span><span class="o">.</span><span class="kt">None</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Once small change is that I&rsquo;m now able to mark the property as <code>let</code> instead of
+<code>var</code>. This is because <code>ObservableProperty</code> stores it&rsquo;s value internally so we
+can mutate it while having the same instance stored on the <code>AppState</code>.</p>
+
+<p>We&rsquo;ll soon see how to use this new power.</p>
+<a href='#the_store' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the_store'>The Store</h3>
+
+<p>Next up we need to define our <q>store</q>. This is the core part of this library
+and it&rsquo;s what you&rsquo;ll be using to access the state and dispatch actions to mutate
+it.</p>
+
+<p>We&rsquo;ll also define it as a <code>struct</code> that implements the <code>StateType</code> protocol.
+This protocol provides all the functionality of the store for you.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Flux</span>
+
+<span class="kd">struct</span> <span class="kt">Store</span><span class="p">:</span> <span class="kt">StateType</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">ObservableProperty</span><span class="o">&lt;</span><span class="kt">AppState</span><span class="o">&gt;</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Notice how we also wrap <code>state</code> in the <code>ObservableProperty</code> class. As mentioned
+earlier, this class is what provides the ability to subscribe to changes.</p>
+
+<p>Note: The state can be any object that conforms to the <code>ObservablePropertyType</code>
+protocol. Implementing that protocol on a different object is how you can plug
+in a custom Rx implementation.</p>
+
+<p>Now we need to set create an instance of our store and give it it&rsquo;s initial
+state.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">initialState</span> <span class="o">=</span> <span class="kt">AppState</span><span class="p">()</span>
+<span class="k">var</span> <span class="nv">store</span> <span class="o">=</span> <span class="kt">Store</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt">ObservableProperty</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="n">initialState</span><span class="p">))</span>
+</code></pre>
+
+<p>Note: We <em>must</em> define the store as a <code>var</code> because once we start dispatching
+actions, they will be mutating it and the compiler will throw a cryptic error if
+it&rsquo;s not a <code>var</code>.  At this point you&rsquo;ll probably see a warning that it&rsquo;s not
+mutated but we can ignore that for now.</p>
+
+<p>We&rsquo;re ready to start using it!</p>
+
+<p>We still don&rsquo;t have a way to modify it but let&rsquo;s take a second to see how
+subscriptions work:</p>
+<pre class="highlight swift"><code><span class="c1">// Subscribe to any change in the app's state</span>
+<span class="n">store</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="p">(</span><span class="nv">newState</span><span class="p">:</span> <span class="kt">AppState</span><span class="p">)</span> <span class="k">in</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"new state: </span><span class="se">\(</span><span class="n">newState</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Subscribe to any change in the app's state</span>
+<span class="n">store</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">userId</span><span class="o">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="p">(</span><span class="nv">newId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">in</span>
+  <span class="nf">print</span><span class="p">(</span><span class="s">"new id: </span><span class="se">\(</span><span class="n">newId</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Update the state</span>
+<span class="n">store</span><span class="o">.</span><span class="nf">dispatch</span><span class="p">(</span><span class="kt">SetUserIdAction</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre>
+
+<p>Assuming <code>SetUserIdAction</code> is defined and does what it says it does, running
+this code we should see an output of:</p>
+<pre class="highlight plaintext"><code>new state: AppState(userId: 5)
+new id: 5
+</code></pre>
+
+<p>Let&rsquo;s learn how to implement that action.</p>
+<a href='#actions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='actions'>Actions</h3>
+
+<p>Actions are how we change the application state. Because all changes go through
+an action, it&rsquo;s very easy to see where state is changing within your
+app by searching for where all places that actions are dispatched.</p>
+
+<p>There are only two types of actions Action and AsyncAction. An Action&rsquo;s job is
+to make modifications to the store and an AsyncAction&rsquo;s job is to do something
+async and then dispatch normal <q>synchronous</q> actions.</p>
+
+<p>We define our actions by implementing the <code>ActionType</code> or <code>AsyncActionType</code>
+protocol on <code>structs</code>.</p>
+
+<p>Let&rsquo;s define one of each.</p>
+
+<p>First, the <q>action</q>.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">SetUserIdAction</span><span class="p">:</span> <span class="kt">ActionType</span> <span class="p">{</span>
+  <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span>
+
+  <span class="kd">func</span> <span class="nf">reduce</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt">AppState</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AppState</span> <span class="p">{</span>
+    <span class="n">state</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">userId</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">id</span>
+
+    <span class="k">return</span> <span class="n">state</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The protocol requires us to implement the <code>reduce</code> method we see above. It&rsquo;s job
+is to directly modify the state and return a new one. The <code>.value</code>s are because
+we have to reach into the <code>ObservableProperty</code>s to get the value.</p>
+
+<p>If we wanted to see this in action, we just have to dispatch it through the
+store.</p>
+<pre class="highlight swift"><code><span class="n">store</span><span class="o">.</span><span class="nf">dispatch</span><span class="p">(</span><span class="kt">SetUserIdAction</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre>
+
+<p>Now let&rsquo;s pretend that we needed to get the user id from the server and set it.
+To do that we implement an async action and then dispatch the synchronous one we
+wrote above.</p>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">GetUserIdAction</span><span class="p">:</span> <span class="kt">AsyncActionType</span> <span class="p">{</span>
+  <span class="kd">func</span> <span class="nf">call</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">getUserIdFromSomeApi</span><span class="p">()</span> <span class="p">{</span> <span class="n">id</span> <span class="k">in</span>
+      <span class="n">store</span><span class="o">.</span><span class="nf">dispatch</span><span class="p">(</span><span class="kt">SetUserIdAction</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="n">id</span><span class="p">))</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>You would then dispatch it the same way as before:</p>
+<pre class="highlight swift"><code><span class="n">store</span><span class="o">.</span><span class="nf">dispatch</span><span class="p">(</span><span class="kt">GetUserIdAction</span><span class="p">())</span>
+</code></pre>
+
+<p>The <code>AsyncActionType</code> protocol requires you to define this <code>call</code> method. It can
+optionally return a value of your choosing. This allows you to return the status
+of some async action via a <code>Promise</code>, <code>SignalProducer</code>, <code>Observer</code>, etc and
+chain off it whatever you need.</p>
+<a href='#summary' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='summary'>Summary</h3>
+
+<p>By combining the state, store and actions we get a powerful system for managing
+state and subscribing to changes across our app as needed.</p>
+
+<p>Blah blah blah</p>
+<a href='#contributing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing'>Contributing</h2>
+
+<p>See the <a href="CONTRIBUTING.md">CONTRIBUTING</a> document.
+Thank you, <a href="https://github.com/thoughtbot/Flux/graphs/contributors">contributors</a>!</p>
+<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+
+<p>Flux is Copyright &copy; 2015 thoughtbot, inc.
+It is free software, and may be redistributed
+under the terms specified in the <a href="/LICENSE">LICENSE</a> file.</p>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
+
+<p>Flux is maintained by Jake Craige.</p>
+
+<p><img src="https://thoughtbot.com/logo.png" alt="thoughtbot"></p>
+
+<p>Flux is maintained and funded by thoughtbot, inc.
+The names and logos for thoughtbot are trademarks of thoughtbot, inc.</p>
+
+<p>We love open source software!
+See <a href="https://thoughtbot.com/community?utm_source=github">our other projects</a>
+or <a href="https://thoughtbot.com/hire-us?utm_source=github">hire us</a> to help build your product.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2015 <a class="link" href="https://thoughtbot.com" target="_blank" rel="external">thoughtbot</a>. All rights reserved. (Last updated: 2015-11-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
