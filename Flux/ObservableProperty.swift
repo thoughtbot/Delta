@@ -5,21 +5,17 @@ public protocol ObservablePropertyType {
 
 public class ObservableProperty<ValueType> {
     public typealias CallbackType = (ValueType -> ())
-    private var _value: ValueType
+
     private var subscriptions = [CallbackType]()
 
     public var value: ValueType {
-        get {
-            return self._value
-        }
-        set {
-            self._value = newValue
+        didSet {
             notifySubscriptions()
         }
     }
 
     public init(_ value: ValueType) {
-        self._value = value
+        self.value = value
     }
 
     public func subscribe(callback: CallbackType) {
