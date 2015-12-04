@@ -3,16 +3,16 @@ public protocol StoreType {
 
     var state: ObservableState { get set }
 
-    mutating func dispatch<A: ActionType where A.StateValueType == ObservableState.ValueType>(action: A)
-    func dispatch<A: DynamicActionType>(action: A) -> A.ResponseType
+    mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action)
+    func dispatch<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction.ResponseType
 }
 
 public extension StoreType {
-    public mutating func dispatch<A: ActionType where A.StateValueType == ObservableState.ValueType>(action: A) {
+    public mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action) {
         state.value = action.reduce(state.value)
     }
 
-    public func dispatch<A : DynamicActionType>(action: A) -> A.ResponseType {
+    public func dispatch<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction.ResponseType {
         return action.call()
     }
 }
