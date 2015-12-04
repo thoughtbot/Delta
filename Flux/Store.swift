@@ -4,7 +4,7 @@ public protocol StoreType {
     var state: ObservableState { get set }
 
     mutating func dispatch<A: ActionType where A.StateValueType == ObservableState.ValueType>(action: A)
-    func dispatch<A: AsyncActionType>(action: A) -> A.ResponseType
+    func dispatch<A: DynamicActionType>(action: A) -> A.ResponseType
 }
 
 public extension StoreType {
@@ -12,7 +12,7 @@ public extension StoreType {
         state.value = action.reduce(state.value)
     }
 
-    public func dispatch<A : AsyncActionType>(action: A) -> A.ResponseType {
+    public func dispatch<A : DynamicActionType>(action: A) -> A.ResponseType {
         return action.call()
     }
 }

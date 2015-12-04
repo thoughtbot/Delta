@@ -18,7 +18,7 @@ struct SetUsersAction: ActionType {
     }
 }
 
-struct FetchUsersAction: AsyncActionType {
+struct FetchUsersAction: DynamicActionType {
     typealias ResponseType = Void
 
     let usersToReturn: [User]
