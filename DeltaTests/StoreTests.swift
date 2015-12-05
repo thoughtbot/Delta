@@ -1,6 +1,6 @@
 import Quick
 import Nimble
-import Flux
+import Delta
 
 var store: Store!
 
