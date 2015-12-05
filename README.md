@@ -1,6 +1,6 @@
-# Flux
+# Delta
 
-Flux implementation for use with any Rx framework.
+Delta is a flux implementation for use with any Rx framework.
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
@@ -15,7 +15,7 @@ The source on `master` assumes Swift 2.1
 [Carthage]: https://github.com/Carthage/Carthage
 
 ```
-github "thoughtbot/Flux"
+github "thoughtbot/Delta"
 ```
 
 Then run `carthage update`.
@@ -35,11 +35,11 @@ See the [CONTRIBUTING] document.
 Thank you, [contributors]!
 
   [CONTRIBUTING]: CONTRIBUTING.md
-  [contributors]: https://github.com/thoughtbot/Flux/graphs/contributors
+  [contributors]: https://github.com/thoughtbot/Delta/graphs/contributors
 
 ## License
 
-Flux is Copyright (c) 2015 thoughtbot, inc.
+Delta is Copyright (c) 2015 thoughtbot, inc.
 It is free software, and may be redistributed
 under the terms specified in the [LICENSE] file.
 
@@ -47,11 +47,11 @@ under the terms specified in the [LICENSE] file.
 
 ## About
 
-Flux is maintained by Jake Craige.
+Delta is maintained by Jake Craige.
 
 ![thoughtbot](https://thoughtbot.com/logo.png)
 
-Flux is maintained and funded by thoughtbot, inc.
+Delta is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!

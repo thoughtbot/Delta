@@ -14,7 +14,7 @@
   ```
 
 1. Add a new GitHub release using the recent `NEWS.md` as the content. Sample
-   URL: https://github.com/thoughtbot/Flux/releases/new?tag=vVERSION
+   URL: https://github.com/thoughtbot/Delta/releases/new?tag=vVERSION
 1. Announce the new release,
    making sure to say "thank you" to the contributors
    who helped shape this version!

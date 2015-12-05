@@ -1,4 +1,4 @@
-@testable import Flux
+import Delta
 
 struct AppState {
     let currentUser = ObservableProperty<User?>(.None)

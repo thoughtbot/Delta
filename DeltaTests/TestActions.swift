@@ -1,4 +1,4 @@
-@testable import Flux
+import Delta
 
 struct SetCurrentUserAction: ActionType {
     let user: User

@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Flux.xcodeproj">
+      location = "self:Delta.xcodeproj">
    </FileRef>
 </Workspace>

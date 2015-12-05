@@ -8,6 +8,6 @@
       location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
-      location = "container:Flux.xcodeproj">
+      location = "container:/Users/jakecraige/Work/apps/Delta/Delta.xcodeproj">
    </FileRef>
 </Workspace>
