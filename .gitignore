@@ -1,4 +1,6 @@
+Carthage
 .DS_Store
 *.xcodeproj
+*.xcworkspace
 build
 docs
