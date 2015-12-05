@@ -3,7 +3,7 @@ import Delta
 struct SetCurrentUserAction: ActionType {
     let user: User
 
-    func reduce(state: AppState) -> AppState {
+    func reduce(state: AppState, store: Store) -> AppState {
         state.currentUser.value = user
         return state
     }
@@ -12,20 +12,19 @@ struct SetCurrentUserAction: ActionType {
 struct SetUsersAction: ActionType {
     let users: [User]
 
-    func reduce(state: AppState) -> AppState {
+    func reduce(state: AppState, store: Store) -> AppState {
         state.users.value = users
         return state
     }
+
 }
 
 struct FetchUsersAction: DynamicActionType {
-    typealias ResponseType = Void
-
     let usersToReturn: [User]
 
-    func call() {
-        delay(0.1) {
+    func call(var store: Store) {
+//        delay(0.1) {
             store.dispatch(SetUsersAction(users: self.usersToReturn))
-        }
+//        }
     }
 }

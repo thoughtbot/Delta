@@ -1,4 +1,6 @@
 public protocol DynamicActionType {
     typealias ResponseType
-    func call() -> ResponseType
+    typealias TheStore: StoreType
+
+    func call(store: TheStore) -> ResponseType
 }

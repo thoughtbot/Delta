@@ -1,4 +1,6 @@
 public protocol ActionType {
     typealias StateValueType
-    func reduce(state: StateValueType) -> StateValueType
+    typealias TheStore: StoreType
+
+    func reduce(state: StateValueType, store: TheStore) -> StateValueType
 }
