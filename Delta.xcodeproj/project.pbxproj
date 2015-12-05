@@ -88,7 +88,7 @@
 			children = (
 				E797CB961BF6741D00A653EB /* Frameworks */,
 				E7ACEA621BF62BD40045CA6A /* Sources */,
-				E7ACEA6E1BF62BD50045CA6A /* UnitTests */,
+				E7ACEA6E1BF62BD50045CA6A /* Tests */,
 				E7ACEA611BF62BD40045CA6A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		E7ACEA6E1BF62BD50045CA6A /* UnitTests */ = {
+		E7ACEA6E1BF62BD50045CA6A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */,
@@ -126,7 +126,7 @@
 				E7ACEA711BF62BD50045CA6A /* Info.plist */,
 				E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */,
 			);
-			path = UnitTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +401,7 @@
 		E7ACEA781BF62BD50045CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.DeltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,7 +411,7 @@
 		E7ACEA791BF62BD50045CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.DeltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
