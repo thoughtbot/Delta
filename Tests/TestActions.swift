@@ -23,8 +23,8 @@ struct FetchUsersAction: DynamicActionType {
     let usersToReturn: [User]
 
     func call(var store: Store) {
-//        delay(0.1) {
+        delay(0.1) {
             store.dispatch(SetUsersAction(users: self.usersToReturn))
-//        }
+        }
     }
 }
