@@ -1,21 +1,10 @@
 public protocol MiddlewareType {
     func call<Action: ActionType>(action: Action) -> Action?
-    func call<Action: ActionType, DynamicAction: DynamicActionType>(action: Action) -> DynamicAction?
-    func call<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction?
-    func call<DynamicAction: DynamicActionType, Action: ActionType>(action: DynamicAction) -> Action?
 }
 
-struct DynamicWrapperAction<Action: ActionType>: DynamicActionType {
-    let action: Action
-
-    func call() {
-        print("I SHOULD PROBABLY DISPATCH \(action)")
-    }
-}
-
-extension MiddlewareType {
-    func call<Action: ActionType, DynamicAction: DynamicActionType>(action: Action) -> DynamicAction? {
-        return DynamicWrapperAction(action: action) as? DynamicAction
+public extension MiddlewareType {
+    func call<Action: ActionType>(action: Action) -> Action? {
+        return action
     }
 }
 
@@ -33,8 +22,10 @@ public class MiddlewareContainer {
     }
 
     func call<Action: ActionType>(action: Action) -> Action? {
-        return middlewares.reduce(action) { (x, middleware) in
-            return middleware.call(x) ?? x
+        return middlewares.reduce(Optional(action)) { (action, middleware) in
+            guard let action = action else { return .None }
+
+            return middleware.call(action)
         }
     }
 }

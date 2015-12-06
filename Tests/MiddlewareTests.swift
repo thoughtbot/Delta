@@ -4,12 +4,13 @@ import Delta
 
 var emptyMiddlewareCalled = 0
 
-struct LoggingWrapperAction<Actionx: ActionType>: DynamicActionType {
-    let action: Actionx
 
-    func call() {
+struct LoggingWrapperAction<Action: ActionType>: DynamicActionType {
+    let action: Action
+
+    func call(store: Store) {
         print("BEFORE DISPATCH")
-        store.dispatch(action)
+        store.dispatch(action as ActionType)
         print("AFTER DISPATCH")
     }
 }

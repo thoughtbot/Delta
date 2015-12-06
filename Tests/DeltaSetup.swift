@@ -7,6 +7,11 @@ struct AppState {
 
 struct Store: StoreType {
     var state: ObservableProperty<AppState>
+    var middlewares = MiddlewareContainer()
+
+    init(state: ObservableProperty<AppState>) {
+        self.state = state
+    }
 }
 
 // MARK: Getters

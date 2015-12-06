@@ -16,6 +16,7 @@ public protocol StoreType {
     typealias ObservableState: ObservablePropertyType
 
     var state: ObservableState { get set }
+    var middlewares: MiddlewareContainer { get }
 
     mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType, Action.Store == Self>(action: Action)
     func dispatch<DynamicAction: DynamicActionType where DynamicAction.Store == Self>(action: DynamicAction) -> DynamicAction.ResponseType
@@ -23,7 +24,9 @@ public protocol StoreType {
 
 public extension StoreType {
     public mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType, Action.Store == Self>(action: Action) {
-        state.value = action.reduce(state.value, store: self)
+        if let x = middlewares.call(action) {
+            state.value = x.reduce(state.value, store: self)
+        }
     }
 
     public func dispatch<DynamicAction: DynamicActionType where DynamicAction.Store == Self>(action: DynamicAction) -> DynamicAction.ResponseType {

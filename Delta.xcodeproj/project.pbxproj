@@ -21,6 +21,8 @@
 		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
 		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
 		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
+		E7D9A93E1C127BDC00CEBD7D /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A93D1C127BDC00CEBD7D /* Middleware.swift */; };
+		E7D9A9411C127C0000CEBD7D /* MiddlewareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D9A93F1C127BE300CEBD7D /* MiddlewareTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		E7ACEA8D1BF638400045CA6A /* TestModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
 		E7ACEA961BF63CC90045CA6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		E7ACEA981BF63E590045CA6A /* TestActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActions.swift; sourceTree = "<group>"; };
+		E7D9A93D1C127BDC00CEBD7D /* Middleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
+		E7D9A93F1C127BE300CEBD7D /* MiddlewareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddlewareTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				E7ACEA7A1BF62E9A0045CA6A /* Store.swift */,
 				E7ACEA871BF6302D0045CA6A /* Action.swift */,
 				E7ACEA891BF630350045CA6A /* DynamicAction.swift */,
+				E7D9A93D1C127BDC00CEBD7D /* Middleware.swift */,
 				E799CF081BFE218600E751E5 /* ObservableProperty.swift */,
 			);
 			path = Sources;
@@ -118,6 +123,7 @@
 		E7ACEA6E1BF62BD50045CA6A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E7D9A93F1C127BE300CEBD7D /* MiddlewareTests.swift */,
 				E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */,
 				E7ACEA8B1BF630EE0045CA6A /* DeltaSetup.swift */,
 				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
@@ -237,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D9A93E1C127BDC00CEBD7D /* Middleware.swift in Sources */,
 				E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */,
 				E7ACEA8A1BF630350045CA6A /* DynamicAction.swift in Sources */,
 				E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */,
@@ -253,6 +260,7 @@
 				E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */,
 				E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */,
 				E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */,
+				E7D9A9411C127C0000CEBD7D /* MiddlewareTests.swift in Sources */,
 				E799CF0B1BFF9E7A00E751E5 /* ObservablePropertyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
