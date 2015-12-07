@@ -4,7 +4,7 @@ import Delta
 
 var store: Store!
 
-class StoreTests: QuickSpec {
+class StoreSpec: QuickSpec {
     override func spec() {
         describe("Store") {
             describe(".dispatch") {
