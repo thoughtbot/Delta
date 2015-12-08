@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		089B593A1C163FA600840D9F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B59371C163FA600840D9F /* Models.swift */; };
+		089B593B1C163FA600840D9F /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B59381C163FA600840D9F /* Actions.swift */; };
+		089B593C1C163FA600840D9F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B59391C163FA600840D9F /* Store.swift */; };
+		089B593F1C163FC000840D9F /* ObservablePropertySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B593D1C163FC000840D9F /* ObservablePropertySpec.swift */; };
+		089B59401C163FC000840D9F /* StoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B593E1C163FC000840D9F /* StoreSpec.swift */; };
+		089B59451C1642C900840D9F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 089B59441C1642C900840D9F /* Info.plist */; };
 		E799CF091BFE218600E751E5 /* ObservableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF081BFE218600E751E5 /* ObservableProperty.swift */; };
-		E799CF0B1BFF9E7A00E751E5 /* ObservablePropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */; };
 		E799CF1A1C05FD6100E751E5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF191C05FD6100E751E5 /* Nimble.framework */; };
 		E799CF1C1C05FD6E00E751E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF1B1C05FD6E00E751E5 /* Quick.framework */; };
 		E7ACEA641BF62BD40045CA6A /* Delta.h in Headers */ = {isa = PBXBuildFile; fileRef = E7ACEA631BF62BD40045CA6A /* Delta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7ACEA6B1BF62BD50045CA6A /* Delta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7ACEA601BF62BD40045CA6A /* Delta.framework */; };
-		E7ACEA701BF62BD50045CA6A /* StoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */; };
 		E7ACEA7B1BF62E9A0045CA6A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA7A1BF62E9A0045CA6A /* Store.swift */; };
 		E7ACEA881BF6302D0045CA6A /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA871BF6302D0045CA6A /* Action.swift */; };
 		E7ACEA8A1BF630350045CA6A /* DynamicAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA891BF630350045CA6A /* DynamicAction.swift */; };
-		E7ACEA8C1BF630EE0045CA6A /* DeltaSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8B1BF630EE0045CA6A /* DeltaSetup.swift */; };
-		E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA8D1BF638400045CA6A /* TestModels.swift */; };
-		E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* Helpers.swift */; };
-		E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA981BF63E590045CA6A /* TestActions.swift */; };
+		E7ACEA971BF63CC90045CA6A /* delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ACEA961BF63CC90045CA6A /* delay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,23 +35,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		089B59371C163FA600840D9F /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		089B59381C163FA600840D9F /* Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		089B59391C163FA600840D9F /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		089B593D1C163FC000840D9F /* ObservablePropertySpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertySpec.swift; sourceTree = "<group>"; };
+		089B593E1C163FC000840D9F /* StoreSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreSpec.swift; sourceTree = "<group>"; };
+		089B59441C1642C900840D9F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E799CF081BFE218600E751E5 /* ObservableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableProperty.swift; sourceTree = "<group>"; };
-		E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservablePropertyTests.swift; sourceTree = "<group>"; };
 		E799CF191C05FD6100E751E5 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
 		E799CF1B1C05FD6E00E751E5 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Checkouts/Quick/build/Debug/Quick.framework; sourceTree = "<group>"; };
 		E7ACEA601BF62BD40045CA6A /* Delta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Delta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7ACEA631BF62BD40045CA6A /* Delta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delta.h; sourceTree = "<group>"; };
 		E7ACEA651BF62BD40045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA6A1BF62BD50045CA6A /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTests.swift; sourceTree = "<group>"; };
-		E7ACEA711BF62BD50045CA6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7ACEA7A1BF62E9A0045CA6A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		E7ACEA871BF6302D0045CA6A /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		E7ACEA891BF630350045CA6A /* DynamicAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicAction.swift; sourceTree = "<group>"; };
-		E7ACEA8B1BF630EE0045CA6A /* DeltaSetup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeltaSetup.swift; sourceTree = "<group>"; };
-		E7ACEA8D1BF638400045CA6A /* TestModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
-		E7ACEA961BF63CC90045CA6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		E7ACEA981BF63E590045CA6A /* TestActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestActions.swift; sourceTree = "<group>"; };
+		E7ACEA961BF63CC90045CA6A /* delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = delay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +75,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		089B59341C163CFB00840D9F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E7ACEA961BF63CC90045CA6A /* delay.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		089B59351C163CFF00840D9F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				089B593E1C163FC000840D9F /* StoreSpec.swift */,
+				089B593D1C163FC000840D9F /* ObservablePropertySpec.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		089B59361C163D0600840D9F /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				089B59391C163FA600840D9F /* Store.swift */,
+				089B59371C163FA600840D9F /* Models.swift */,
+				089B59381C163FA600840D9F /* Actions.swift */,
+			);
+			path = Setup;
+			sourceTree = "<group>";
+		};
+		089B59431C16429200840D9F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				089B59441C1642C900840D9F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E797CB961BF6741D00A653EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,13 +154,10 @@
 		E7ACEA6E1BF62BD50045CA6A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E7ACEA6F1BF62BD50045CA6A /* StoreTests.swift */,
-				E7ACEA8B1BF630EE0045CA6A /* DeltaSetup.swift */,
-				E7ACEA8D1BF638400045CA6A /* TestModels.swift */,
-				E7ACEA981BF63E590045CA6A /* TestActions.swift */,
-				E7ACEA961BF63CC90045CA6A /* Helpers.swift */,
-				E7ACEA711BF62BD50045CA6A /* Info.plist */,
-				E799CF0A1BFF9E7A00E751E5 /* ObservablePropertyTests.swift */,
+				089B59341C163CFB00840D9F /* Helpers */,
+				089B59361C163D0600840D9F /* Setup */,
+				089B59351C163CFF00840D9F /* Tests */,
+				089B59431C16429200840D9F /* Resources */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -227,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089B59451C1642C900840D9F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7ACEA8C1BF630EE0045CA6A /* DeltaSetup.swift in Sources */,
-				E7ACEA701BF62BD50045CA6A /* StoreTests.swift in Sources */,
-				E7ACEA8E1BF638400045CA6A /* TestModels.swift in Sources */,
-				E7ACEA991BF63E590045CA6A /* TestActions.swift in Sources */,
-				E7ACEA971BF63CC90045CA6A /* Helpers.swift in Sources */,
-				E799CF0B1BFF9E7A00E751E5 /* ObservablePropertyTests.swift in Sources */,
+				089B593F1C163FC000840D9F /* ObservablePropertySpec.swift in Sources */,
+				089B593B1C163FA600840D9F /* Actions.swift in Sources */,
+				E7ACEA971BF63CC90045CA6A /* delay.swift in Sources */,
+				089B593C1C163FA600840D9F /* Store.swift in Sources */,
+				089B59401C163FC000840D9F /* StoreSpec.swift in Sources */,
+				089B593A1C163FA600840D9F /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +435,7 @@
 		E7ACEA781BF62BD50045CA6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.DeltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,7 +445,7 @@
 		E7ACEA791BF62BD50045CA6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Tests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.DeltaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
