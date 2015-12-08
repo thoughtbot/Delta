@@ -2,7 +2,7 @@ import Quick
 import Nimble
 import Delta
 
-class ObservablePropertyTests: QuickSpec {
+class ObservablePropertySpec: QuickSpec {
     override func spec() {
         describe("ObservableProperty") {
             it("is initialized with a value") {
