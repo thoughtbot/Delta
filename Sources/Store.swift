@@ -11,53 +11,88 @@
      var id = ObservableProperty(0)
  }
 
- struct Store: StoreType {
-     var state: ObservableProperty<AppState>
- }
-
  let initialState = AppState()
  var store = Store(state: ObservableProperty(initialState))
  ```
+
 */
-public protocol StoreType {
-    /**
-     An observable state of the store. This is accessed directly to subscribe to
-     changes.
-    */
-    typealias ObservableState: ObservablePropertyType
+public struct Store<ObservableState: ObservablePropertyType> {
+
+    public typealias StateValueType = ObservableState.ValueType
 
     /**
-     The type of the root state of the application.
-
-     - note: This is inferred from the `reduce` method implementation.
+     A function type that takes a state value and a `next` and can return either
+     false or the result of `next`. It is used to determine whether state will be
+     mutated or not when an action is dispatched.
     */
-    var state: ObservableState { get set }
-
-    /**
-     Dispatch an action that will mutate the state of the store.
-    */
-    mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action)
+    public typealias Middleware = (StateValueType, () -> Bool) -> Bool
 
     /**
-     Dispatch an async action that when called should trigger another dispatch
-     with a synchronous action.
-    */
-    func dispatch<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction.ResponseType
-}
+     A collection of Middleware functions to be performed and when an action
+     is dispatched and potentially prevent the state from being updated.
+     */
+    private var middlewares = [Middleware]()
 
-public extension StoreType {
     /**
-      Dispatches an action by settings the state's value to the result of
-      calling it's `reduce` method.
+     The root state of the application.
     */
-    public mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action) {
-        state.value = action.reduce(state.value)
+    public var state: ObservableState
+
+    public init(state: ObservableState) {
+        self.state = state
     }
 
     /**
-      Dispatches an async action by calling it's `call` method.
+     Dispatches an action by settings the state's value to the result of
+     calling its `reduce` method.
+     */
+    public mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action) {
+        if wrapMiddleware(middlewares.count - 1, f: { _ in return true })(state.value) {
+            state.value = action.reduce(state.value)
+        }
+    }
+
+    /**
+     Dispatch a dynamic action that, when called, should trigger another dispatch
+     with a mutating action.
     */
     public func dispatch<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction.ResponseType {
         return action.call()
+    }
+}
+
+extension Store {
+    /**
+     Register a new middleware to be performed when an action is dispatched
+     and potentially prevent the state from being updated.
+    */
+    public mutating func register(middleware: Middleware) {
+        middlewares.append(middleware)
+    }
+
+    /**
+     Check each middleware, executing success if they all return true, or
+     failure if any return false.
+    */
+    private mutating func update<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action) {
+        if wrapMiddleware(middlewares.count - 1, f: { _ in return true })(state.value) {
+            state.value = action.reduce(state.value)
+        }
+    }
+
+    /**
+     Recursively wrap middlewares, passing each to the previous as `next`
+     so that it may be called and returned as a way to continue.
+    */
+    private func wrapMiddleware(index: Int, f: (StateValueType) -> Bool) -> (StateValueType) -> Bool {
+        if index < 0 {
+            return f
+        } else {
+            return wrapMiddleware(index - 1) { stateValue -> Bool in
+                return self.middlewares[0](stateValue) {
+                    return f(stateValue)
+                }
+            }
+        }
     }
 }
