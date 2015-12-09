@@ -2,15 +2,13 @@ import Quick
 import Nimble
 import Delta
 
-var store: Store!
-
 class StoreSpec: QuickSpec {
     override func spec() {
         describe("Store") {
             describe(".dispatch") {
                 beforeEach() {
                     let initialState = ObservableProperty(AppState())
-                    store = Store(state: initialState)
+                    store = AppStore(state: initialState)
                 }
                 
                 it("triggers action") {

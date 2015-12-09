@@ -17,7 +17,7 @@
  store.dispatch(UpdateIdAction(id: 1))
  ```
 */
-public protocol ActionType {
+public protocol Action {
     /**
      The type of the app's state.
 

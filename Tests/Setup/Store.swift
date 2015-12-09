@@ -5,12 +5,12 @@ struct AppState {
     let users = ObservableProperty<[User]>([])
 }
 
-struct Store: StoreType {
+struct AppStore: Store {
     var state: ObservableProperty<AppState>
 }
 
 // MARK: Getters
-extension Store {
+extension AppStore {
     var currentUser: User? {
         return state.value.currentUser.value
     }
@@ -19,3 +19,5 @@ extension Store {
         return state.value.users.value
     }
 }
+
+var store: AppStore!

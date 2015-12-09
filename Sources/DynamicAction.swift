@@ -18,7 +18,7 @@
  store.dispatch(UpdateIdAction(id: 1))
  ```
 */
-public protocol DynamicActionType {
+public protocol DynamicAction {
     /**
      The return type from the `call` method.
 

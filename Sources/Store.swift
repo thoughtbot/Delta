@@ -19,12 +19,12 @@
  var store = Store(state: ObservableProperty(initialState))
  ```
 */
-public protocol StoreType {
+public protocol Store {
     /**
      An observable state of the store. This is accessed directly to subscribe to
      changes.
     */
-    typealias ObservableState: ObservablePropertyType
+    typealias ObservableState: Observable
 
     /**
      The type of the root state of the application.
@@ -36,28 +36,28 @@ public protocol StoreType {
     /**
      Dispatch an action that will mutate the state of the store.
     */
-    mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action)
+    mutating func dispatch<A: Action where A.StateValueType == ObservableState.ValueType>(action: A)
 
     /**
      Dispatch an async action that when called should trigger another dispatch
      with a synchronous action.
     */
-    func dispatch<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction.ResponseType
+    func dispatch<D: DynamicAction>(action: D) -> D.ResponseType
 }
 
-public extension StoreType {
+public extension Store {
     /**
       Dispatches an action by settings the state's value to the result of
       calling it's `reduce` method.
     */
-    public mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action) {
+    public mutating func dispatch<A: Action where A.StateValueType == ObservableState.ValueType>(action: A) {
         state.value = action.reduce(state.value)
     }
 
     /**
       Dispatches an async action by calling it's `call` method.
     */
-    public func dispatch<DynamicAction: DynamicActionType>(action: DynamicAction) -> DynamicAction.ResponseType {
+    public func dispatch<D: DynamicAction>(action: D) -> D.ResponseType {
         return action.call()
     }
 }

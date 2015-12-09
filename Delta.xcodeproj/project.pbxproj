@@ -12,7 +12,6 @@
 		089B593C1C163FA600840D9F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B59391C163FA600840D9F /* Store.swift */; };
 		089B593F1C163FC000840D9F /* ObservablePropertySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B593D1C163FC000840D9F /* ObservablePropertySpec.swift */; };
 		089B59401C163FC000840D9F /* StoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089B593E1C163FC000840D9F /* StoreSpec.swift */; };
-		089B59451C1642C900840D9F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 089B59441C1642C900840D9F /* Info.plist */; };
 		E799CF091BFE218600E751E5 /* ObservableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E799CF081BFE218600E751E5 /* ObservableProperty.swift */; };
 		E799CF1A1C05FD6100E751E5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF191C05FD6100E751E5 /* Nimble.framework */; };
 		E799CF1C1C05FD6E00E751E5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E799CF1B1C05FD6E00E751E5 /* Quick.framework */; };
@@ -262,7 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				089B59451C1642C900840D9F /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

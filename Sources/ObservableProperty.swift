@@ -6,7 +6,7 @@
  This is useful if you want to plug in a reactive programming library and use
  that for state instead of the built-in ObservableProperty type.
 */
-public protocol ObservablePropertyType {
+public protocol Observable {
     /**
      The type of the value that `Self` will hold.
 
@@ -81,4 +81,4 @@ public class ObservableProperty<ValueType> {
     }
 }
 
-extension ObservableProperty: ObservablePropertyType { }
+extension ObservableProperty: Observable { }

@@ -1,6 +1,6 @@
 import Delta
 
-struct SetCurrentUserAction: ActionType {
+struct SetCurrentUserAction: Action {
     let user: User
 
     func reduce(state: AppState) -> AppState {
@@ -9,7 +9,7 @@ struct SetCurrentUserAction: ActionType {
     }
 }
 
-struct SetUsersAction: ActionType {
+struct SetUsersAction: Action {
     let users: [User]
 
     func reduce(state: AppState) -> AppState {
@@ -18,7 +18,7 @@ struct SetUsersAction: ActionType {
     }
 }
 
-struct FetchUsersAction: DynamicActionType {
+struct FetchUsersAction: DynamicAction {
     typealias ResponseType = Void
 
     let usersToReturn: [User]
