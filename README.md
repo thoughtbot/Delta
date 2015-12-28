@@ -32,6 +32,29 @@ for up to date installation instructions.
 
 [carthage-installation]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
 
+### [CocoaPods]
+
+[CocoaPods]: http://cocoapods.org
+
+Add the following to your [Podfile](http://guides.cocoapods.org/using/the-podfile.html):
+
+```ruby
+pod 'Delta', :git => "https://github.com/thoughtbot/Delta.git"
+```
+
+You also need to make sure you're opting into using frameworks:
+
+```ruby
+use_frameworks!
+```
+
+Then run `pod install` with CocoaPods 0.36 or newer.
+
+### Git Submodules
+
+Add this repo as a submodule, and add the project file to your workspace. You
+can then link against `Delta.framework` in your application target.
+
 ## Usage
 
 - [Getting Started]
