@@ -18,6 +18,22 @@ struct SetUsersAction: ActionType {
     }
 }
 
+struct SetUserActiveAction: ActionType {
+    let user: User
+    let active: Bool
+
+    func reduce(state: AppState) -> AppState {
+        state.users.value = state.users.value.map { u in
+            if u == user {
+                return User(name: u.name, active: active)
+            }
+
+            return u
+        }
+        return state
+    }
+}
+
 struct FetchUsersAction: DynamicActionType {
     typealias ResponseType = Void
 

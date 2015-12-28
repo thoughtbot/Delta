@@ -29,6 +29,24 @@ class StoreSpec: QuickSpec {
                     
                     expect(store.users).toEventually(equal(usersToReturn))
                 }
+
+                it("handles multiple actions in a row") {
+                    let mary = User(name: "Mary", active: false)
+                    let john = User(name: "John", active: true)
+                    let kate = User(name: "Kate", active: false)
+                    let users = [mary, john, kate]
+
+                    store.dispatch(SetUsersAction(users: users))
+                    store.dispatch(SetUserActiveAction(user: mary, active: true))
+                    store.dispatch(SetUserActiveAction(user: john, active: false))
+                    store.dispatch(SetUserActiveAction(user: kate, active: true))
+
+                    expect(store.users).to(equal([
+                        User(name: "Mary", active: true),
+                        User(name: "John", active: false),
+                        User(name: "Kate", active: true),
+                    ]))
+                }
             }
         }
     }
