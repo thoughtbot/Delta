@@ -4,6 +4,7 @@ set -e
 
 echo "Generating docs with jazzy..."
 jazzy \
+  --swift-version=2.1.1 \
   --module Delta \
   --github_url https://github.com/thoughtbot/Delta \
   --author thoughtbot \
