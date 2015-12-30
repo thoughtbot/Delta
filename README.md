@@ -59,11 +59,13 @@ can then link against `Delta.framework` in your application target.
 
 - [Getting Started]
 - [Using Reactive Extensions][Using RX]
+- [Example Application using Delta and ReactiveCocoa][Example Application]
 - [API Documentation]
 
 [Getting Started]: ./documentation/getting-started.md
 [Using RX]: ./documentation/reactive-extensions.md
 [API Documentation]: https://thoughtbot.github.io/Delta
+[Example Application]: https://github.com/thoughtbot/DeltaTodoExample
 
 ## Contributing
 
