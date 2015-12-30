@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+carthage build --no-skip-current --platform iOS
+carthage archive Delta
