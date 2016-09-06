@@ -32,7 +32,7 @@ provided `ObservableProperty` type.
 import Delta
 
 struct AppState {
-  let userId: ObservableProperty<Int?>(.None)
+  let userId = ObservableProperty<Int?>(.None)
 }
 ```
 
@@ -91,7 +91,7 @@ store.state.subscribe { (newState: AppState) in
 }
 
 // Subscribe to a change in the userId
-store.state.value.userId.subscribe { (newId: Int) in
+store.state.value.userId.subscribe { (newId: Int?) in
   print("new id: \(newId)")
 }
 
@@ -136,7 +136,7 @@ struct SetUserIdAction: ActionType {
   let id: Int
 
   func reduce(state: AppState) -> AppState {
-    state.value.userId.value = id
+    state.userId.value = id
 
     return state
   }
@@ -144,8 +144,8 @@ struct SetUserIdAction: ActionType {
 ```
 
 The protocol requires us to implement the `reduce` method we see above. Its job
-is to directly modify the state and return a new one. The `.value`s are there
-because we have to reach into the `ObservableProperty`s to get the value.
+is to directly modify the state and return a new one. The `.value` is there
+because we have to reach into the `ObservableProperty` to get the value.
 
 If we wanted to see this in action, we just have to dispatch it through the
 store.
