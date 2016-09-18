@@ -24,7 +24,7 @@ public protocol DynamicActionType {
 
      - note: This is inferred from the `call` method implementation.
     */
-    typealias ResponseType
+    associatedtype ResponseType
 
     /**
      This method is where you perform some async behavior that when completed,
