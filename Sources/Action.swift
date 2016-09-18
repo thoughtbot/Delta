@@ -23,7 +23,7 @@ public protocol ActionType {
 
      - note: This is inferred from the `reduce` method implementation.
     */
-    typealias StateValueType
+    associatedtype StateValueType
 
     /**
      This method is called when this action is dispatched. Its purpose is to

@@ -12,7 +12,7 @@ public protocol ObservablePropertyType {
 
      - note: This is inferred from the `value` property implementation.
     */
-    typealias ValueType
+    associatedtype ValueType
 
     /**
      The value to be observed and mutated.
@@ -40,11 +40,11 @@ public protocol ObservablePropertyType {
  // "newValue: 2"
  ```
 */
-public class ObservableProperty<ValueType> {
+public class ObservableProperty<ValueType>: ObservablePropertyType {
     /**
      The type of the callback to be called when the `value` changes.
     */
-    public typealias CallbackType = (ValueType -> ())
+    public typealias CallbackType = (ValueType) -> ()
 
     private var subscriptions = [CallbackType]()
 
@@ -70,7 +70,7 @@ public class ObservableProperty<ValueType> {
 
       - parameter callback: The function to call when the value changes.
     */
-    public func subscribe(callback: CallbackType) {
+    public func subscribe(_ callback: @escaping CallbackType) {
         subscriptions.append(callback)
     }
 
@@ -80,5 +80,3 @@ public class ObservableProperty<ValueType> {
         }
     }
 }
-
-extension ObservableProperty: ObservablePropertyType { }

@@ -1,7 +1,7 @@
 import Delta
 
 struct AppState {
-    let currentUser = ObservableProperty<User?>(.None)
+    let currentUser = ObservableProperty<User?>(.none)
     let users = ObservableProperty<[User]>([])
 }
 

@@ -16,8 +16,8 @@ class ObservablePropertySpec: QuickSpec {
                     let property = ObservableProperty(1)
                     
                     var called = 0
-                    property.subscribe { _ in called++ }
-                    property.subscribe { _ in called++ }
+                    property.subscribe { _ in called += 1 }
+                    property.subscribe { _ in called += 1 }
                     property.value = 5
 
                     expect(called).to(equal(2))
