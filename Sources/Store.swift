@@ -24,7 +24,7 @@ public protocol StoreType {
      An observable state of the store. This is accessed directly to subscribe to
      changes.
     */
-    typealias ObservableState: ObservablePropertyType
+    associatedtype ObservableState: ObservablePropertyType
 
     /**
      The type of the root state of the application.
@@ -36,7 +36,7 @@ public protocol StoreType {
     /**
      Dispatch an action that will mutate the state of the store.
     */
-    mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action)
+    mutating func dispatch<Action: ActionType>(action: Action) where Action.StateValueType == ObservableState.ValueType
 
     /**
      Dispatch an async action that when called should trigger another dispatch
@@ -50,8 +50,8 @@ public extension StoreType {
       Dispatches an action by settings the state's value to the result of
       calling it's `reduce` method.
     */
-    public mutating func dispatch<Action: ActionType where Action.StateValueType == ObservableState.ValueType>(action: Action) {
-        state.value = action.reduce(state.value)
+    public mutating func dispatch<Action: ActionType>(action: Action) where Action.StateValueType == ObservableState.ValueType {
+        state.value = action.reduce(state: state.value)
     }
 
     /**
